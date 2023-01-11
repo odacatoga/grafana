@@ -504,6 +504,7 @@ tee -a /etc/prometheus/prometheus.yml <<EOF
        - https://facebook.com
        - https://google.com
        - https://fptgroup2.com
+       - https://zabbix.fptgroup.com
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
