@@ -500,12 +500,10 @@ tee -a /etc/prometheus/prometheus.yml <<EOF
      module: [http_2xx] # Look for a HTTP 200 response.
     static_configs:
     - targets:
+       - https://jetking.fpt.edu.vn/
        - https://facebook.com
        - https://google.com
-       - https://youtube.com
-       - https://soha.vn
        - https://fptgroup2.com
-       - https://fptgroup.com
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
@@ -529,7 +527,7 @@ tee -a /etc/prometheus/prometheus.yml <<EOF
     static_configs:
     - targets:
       - 10.10.100.162:9100
-      - 10.10.200.154:9100
+      - 10.10.100.164:9100
 EOF
 
 sleep 3
